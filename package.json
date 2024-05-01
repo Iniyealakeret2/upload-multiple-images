@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node app.js",
+    "algo": "npx tsc && node algorithms/algo.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,5 +15,8 @@
     "express": "^4.19.2",
     "multer": "^1.4.5-lts.1",
     "sharp": "^0.33.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
   }
 }
