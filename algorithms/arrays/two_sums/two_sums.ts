@@ -2,7 +2,7 @@
 export const twoSums = (numbers: number[], target: number): number[] => {
   //check if numbers array is less than 2
   if (numbers.length < 2) return [];
-  // Create a map to store the index of each number in the array
+  // Create a map to store the index of each number in the array Map<key, vale>
   const targetNumbers: Map<number, number> = new Map();
 
   for (let index = 0; index < numbers.length; index++) {
@@ -24,18 +24,22 @@ export const twoSums = (numbers: number[], target: number): number[] => {
  * 
  * Explanation:
 
-	1. We define a function twoSum which takes in an array of numbers targetNumbers and a target number target and returns an array of indices of the two numbers that add up to the target.
+	1. We define a function twoSum which takes in an array of numbers targetNumbers and a target number target 
+     and returns an array of indices of the two numbers that add up to the target.
 
 	2. Inside the function, we create a Map called targetNumbers to store the index of each number in the array.
 
 	3. We iterate through the array targetNumbers using a for loop.
 
-	4. For each number targetNumbers[index] in the array, we calculate the complement which is the difference between the target and the current number (target - targetNumbers[index]).
+	4. For each number targetNumbers[index] in the array, we calculate the complement which is the difference 
+     between the target and the current number (target - targetNumbers[index]).
 
-	5. We check if the complement exists in the targetNumbers. If it does, it means we have found the pair of numbers whose sum is equal to the target. In this case, we return an array 
-	containing the indices of the current number and the complement's index.
+	5. We check if the complement exists in the targetNumbers. If it does, it means we have found the pair of 
+     numbers whose sum is equal to the target. In this case, we return an array containing the indices of 
+     the current number and the complement's index.
 
-	6. If the complement doesn't exist in the targetNumbers, we store the current number and its index in the targetNumbers.
+	6. If the complement doesn't exist in the targetNumbers, we store the current number and its index 
+     in the targetNumbers.
 
 	7. If no solution is found after iterating through the entire array, we return an empty array.
 
